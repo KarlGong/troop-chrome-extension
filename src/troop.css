@@ -1,0 +1,83 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+input {
+    background-color: white;
+    -webkit-appearance: none;
+    border: 1px solid rgb(163, 163, 163);
+    border-radius: 2px;
+    padding: 1px 3px 0;
+    margin: 0 0 0 1px;
+    width: 253px;
+    height: 20px;
+    line-height: 17px;
+    flex: 1;
+}
+
+.toolbar {
+    background-color: #f3f3f3;
+    padding: 4px 2px;
+    flex: none;
+    flex-wrap: wrap;
+    align-items: center;
+    border-bottom: 1px solid #dadada;
+}
+
+.rc-handle-container {
+    position: relative;
+}
+
+.rc-handle {
+    position: absolute;
+    width: 10px;
+    cursor: col-resize;
+    margin-left: -3px;
+    z-index: 2;
+}
+
+table.rc-table-resizing {
+    cursor: col-resize;
+}
+
+table.rc-table-resizing thead,
+table.rc-table-resizing thead > th,
+table.rc-table-resizing thead > th > a {
+    cursor: col-resize;
+}
+
+.table {
+    width: 100%;
+    text-align: left;
+}
+
+.table th {
+    padding: 0 4px;
+    font-weight: normal;
+    vertical-align: middle;
+    background-color: #fafafa;
+    border-left: 1px solid #aaa;
+    border-bottom: 1px solid #aaa;
+}
+
+.table td {
+    vertical-align: top;
+    padding: 1px 4px;
+    border-left: 1px solid #d4d4d4;
+}
+
+.table th:first-child,
+.table td:first-child {
+    border-left: none !important;
+}
+
+.table td > div, .table th > div {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+

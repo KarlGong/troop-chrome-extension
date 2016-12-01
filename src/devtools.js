@@ -1,0 +1,1 @@
+chrome.devtools.panels.create("Troop", "troop.png", "troop.html");
