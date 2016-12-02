@@ -1,14 +1,18 @@
-chrome.tabs.getCurrent(function (currentTab) {
-    alert(currentTab);
-    chrome.debugger.attach({ //debug at current tab
-        tabId: currentTab.id
-    }, "1.0", function () {
-        chrome.debugger.sendCommand({ //first enable the Network
-            tabId: currentTab.id
-        }, "Network.enable");
-    });
-});
+// chrome.tabs.getCurrent(function (currentTab) {
+//     alert(currentTab);
+//     chrome.debugger.attach({ //debug at current tab
+//         tabId: currentTab.id
+//     }, "1.0", function () {
+//         chrome.debugger.sendCommand({ //first enable the Network
+//             tabId: currentTab.id
+//         }, "Network.enable");
+//     });
+// });
 
+
+chrome.tabs.onActivated.addListener(function (activeInfo) {
+
+});
 
 
 //
