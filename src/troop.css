@@ -57,7 +57,6 @@ table.rc-table-resizing thead > th > a {
     padding: 0 4px;
     font-weight: normal;
     vertical-align: middle;
-    background-color: #fafafa;
     border-left: 1px solid #aaa;
     border-bottom: 1px solid #aaa;
 }

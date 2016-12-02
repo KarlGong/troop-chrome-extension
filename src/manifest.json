@@ -4,5 +4,10 @@
   "name": "Troop",
   "version": "1.0",
 
-  "devtools_page": "devtools.html"
+  "devtools_page": "devtools.html",
+
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "permissions": [ "tabs", "debugger" ]
 }

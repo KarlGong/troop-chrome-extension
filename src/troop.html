@@ -1,54 +1,39 @@
-<html>
+<html ng-app="troop" ng-controller="troopController">
 <head>
-    <script src="lib/jquery.min.js"></script>
-    <script src="lib/jquery.resizableColumns.min.js"></script>
+    <script src="lib/angular.min.js"></script>
     <script src="troop.js"></script>
     <link type="text/css" rel="stylesheet" href="troop.css"/>
 </head>
 <body>
 <div class="toolbar">
-    <input placeholder="Filter"/>
+    <input placeholder="Filter" ng-model="filterText"/>
     <button class="clear-all">Clear All</button>
 </div>
-<table class="table" data-resizable-columns-id="request-table" cellpadding="0" cellspacing="0">
+<table class="table" cellpadding="0" cellspacing="0">
     <thead>
-    <th data-resizable-column-id="request">Request</th>
-    <th data-resizable-column-id="status">Status</th>
-    <th data-resizable-column-id="max-age">Max Age</th>
-    <th data-resizable-column-id="collapsed">Collapsed</th>
+    <th>Request</th>
+    <th>Status</th>
+    <th>Max Age</th>
+    <th>Collapsed</th>
     </thead>
     <tbody>
-    <tr>
+    <tr ng-repeat="request in requests">
         <td>
-            <div>fdfds afdjsalkfj dsalkasfa</div>
+            <div>{{request.troop.command}}</div>
+            <div>{{request.troop.domain}}</div>
         </td>
         <td>
-            <div>fdfds afdjsalkfj dsalkasfa</div>
+            <div>{{request.status}}</div>
         </td>
         <td>
-            <div>fdfds afdjsalkfj dsalkasfa</div>
+            <div>{{request.maxAge}}</div>
         </td>
         <td>
-            <div>fdfds afdjsalkfj dsalkasfa</div>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <div>fdfds afdjsalkfj dsalkasfa</div>
-        </td>
-        <td>
-            <div>fdfds afdjsalkfj dsalkasfa</div>
-        </td>
-        <td>
-            <div>fdfds afdjsalkfj dsalkasfa</div>
-        </td>
-        <td>
-            <div>fdfds afdjsalkfj dsalkasfa</div>
+            <div>{{request.collapsed}}</div>
         </td>
     </tr>
 
     </tbody>
-
 </table>
 </body>
 </html>
